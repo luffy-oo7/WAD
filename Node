@@ -2,7 +2,27 @@ const express = require('express')
 const app = express();
 app.use(express.static('public'))
 
-const PORT=3000
-app.listen(PORT,()=>{
+const PORT=8000;
+app.listen(8000,'0.0.0.0',()=>{
     console.log("Server running ");
-})
+});
+
+
+sudo apt update
+sudo apt install nodejs npm unrar -y
+unrar x node.rar
+cd node
+npm install
+node app.js
+
+Go to AWS EC2 Console.
+In the left menu, click Instances and select your running instance.
+Scroll down to Security → Security groups and click on the blue launch-wizard-3 link.
+This opens the Security Group settings.
+Click the Inbound rules tab.
+Click Edit inbound rules.
+Click “Add rule”:
+Type: Custom TCP
+Port Range: 3000 (or whatever your Node.js app uses)
+Source: 0.0.0.0/0 (or restrict to your IP if needed)
+Click Save rules.
