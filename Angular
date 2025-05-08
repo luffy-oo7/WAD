@@ -1,0 +1,81 @@
+<h1>{{title}}</h1>
+
+<input type="text" #name placeholder="enter name" name="Name"> <br>
+<input type="text" #address placeholder="enter add" name="Address"> <br>
+<input type="email" #email placeholder="enter mail" name="Email"> <br>
+<input type="number" #contact placeholder="enter contact" name="Contact"> <br>
+<input type="password" #password placeholder="enter pass" name="Password"> <br>
+
+<button (click)="getValue(name.value, address.value , email.value , contact.value , password.value)">
+  Register
+</button>
+
+<h1>data</h1>
+<p>Name:{{displayname}}</p><br>
+<p>Name:{{displayadd}}</p><br>
+<p>Name:{{displayemail}}</p><br>
+<p>Name:{{displaycontact}}</p><br>
+
+<h2>Login</h2>
+<input type="email" #loginemail placeholder="enter email"><br>
+<input type="password" #loginpass placeholder="enter password"><br>
+<button (click)="loginUser(loginemail.value, loginpass.value)">Login</button>
+
+<p>{{loginMessage}}</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'Registration page';
+
+  displayname='';
+  displayadd='';
+  displayemail='';
+  displaycontact='';
+  displaypassword = '';
+
+
+  getValue(name:string ,address:string , email:string , contact:string ,password: string){
+    this.displayname=name;
+    this.displayadd=address;
+    this.displayemail=email;
+    this.displaycontact=contact;
+    this.displaypassword = password;
+  }
+  
+
+  loginEmail = '';
+loginPassword = '';
+loginMessage = '';
+
+loginUser(email: string, password: string) {
+  if (email === this.displayemail && password === this.displaypassword) {
+    this.loginMessage = 'Login successful!';
+  } else {
+    this.loginMessage = 'Invalid credentials!';
+  }
+}
+
+
+}
