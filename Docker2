@@ -1,0 +1,120 @@
+/////////////DOCKER
+
+
+/////JAVA
+
+
+sudo apt update
+sudo apt install docker.io -y
+
+sudo systemctl enable docker
+sudo systemctl start docker
+
+docker --version
+
+mkdir java-docker
+cd java-docker
+
+nano Dockerfile
+
+# Use the official OpenJDK base image
+FROM openjdk:17-jdk-slim
+
+# Set working directory inside container
+WORKDIR /app
+
+# Copy your Java source or compiled files here if needed
+# Example: COPY HelloWorld.java /app
+
+# Default command (optional)
+CMD ["jshell"]
+
+Save and exit (Ctrl+O, Enter, then Ctrl+X)
+
+sudo docker build -t my-java-container .
+
+sudo docker run -it my-java-container
+
+System.out.println("Hello from Dockerized Java!");
+
+int a = 10;
+int b = 5;
+int sum = a + b;
+System.out.println("Addition: " + sum);
+
+int x = 6;
+int y = 7;
+int product = x * y;
+System.out.println("Multiplication: " + product);
+
+
+/exit
+
+
+
+////////////////////IMAGE
+
+
+mkdir my-java-app
+cd my-java-app
+
+nano Main.java
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello from Java Docker!");
+    }
+}
+
+nano Dockerfile
+
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY Main.java .
+RUN javac Main.java
+CMD ["java", "Main"]
+
+sudo docker build -t my-new-java-image .
+
+Successfully built <image_id>
+Successfully tagged my-new-java-image:latest
+
+sudo docker run my-new-java-image
+
+sudo usermod -aG docker $USER
+
+newgrp docker
+
+docker images
+
+docker pull REPOSITORY:TAG
+
+
+
+
+
+///////PYTHON
+
+
+mkdir python-docker
+cd python-docker
+
+nano Dockerfile
+
+# Use the official Python base image
+FROM python:3.10-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Default command to open Python shell
+CMD ["python3"]
+
+sudo docker build -t my-python-container .
+
+sudo docker run -it my-python-container
+
+a = 10
+b = 5
+print("Addition:", a + b)
+print("Multiplication:", a * b)
