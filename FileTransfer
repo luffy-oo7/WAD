@@ -1,0 +1,1 @@
+sudo scp hello.txt vagrant@192.168.1.48:/home/vagrant
