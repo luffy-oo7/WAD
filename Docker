@@ -1,0 +1,23 @@
+lsb_release -a
+sudo apt-get update
+sudo apt install docker.io
+sudo usermod -aG docker #USER
+sudo docker images
+sudo docker run -it -d openjdk
+sudo docker images
+sudo docker ps
+sudo docker exec -it 'container id' jshell
+
+
+int a = 10;
+int b = 5;
+int sum = a + b;
+System.out.println("Addition: " + sum);
+
+
+/exit
+sudo docker ps
+sudo docker stop 'container id'
+
+
+
