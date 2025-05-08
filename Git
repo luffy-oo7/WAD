@@ -1,0 +1,23 @@
+winget install --id GitHub.cli -e
+
+direct or move to your desired directory where your files are stored
+
+cd gitproject      ------Change it with your folder name
+
+winpty gh auth login
+
+git init -b main
+
+
+git add .
+
+
+git commit -m "Initial Changes"
+
+gh repo create myapp4 --public --source=. --remote=origin --push
+
+git remote set-url origin https://github.com/Master8698/myapp4.git             -----Master8698 is my username and 
+                                                                                    
+
+git push -u origin main
+
