@@ -1,3 +1,12 @@
+#######        commands          #######
+npm init
+npm i mongodb
+npm i express
+node index.js
+
+#######        mongodb.js        #######
+
+
 const {MongoClient} = require('mongodb')
 const url = "mongodb://localhost:27017";
 const client = new MongoClient(url);
@@ -11,6 +20,10 @@ const dbConnect = async()=>{
 module.exports=dbConnect;
 
 
+
+
+
+#######        index.html        #######
 
 
 
