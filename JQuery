@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header" data-theme="b">
+            <h1>Paintings</h1>
+        </div>
+
+        <div data-role="navbar" data-grid="c">
+            <ul>
+                <li><a href="index.html" class="ui-btn-active">Home</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        <center><h3>Top products</h3></center>
+        <div class="content">
+            <center>
+            <div>
+                <img src="image.jfif" height="250px" width="250px">
+                <img src="image.jfif" height="250px" width="250px">
+                <img src="image.jfif" height="250px" width="250px">
+            </div>
+        </center>
+        <br>
+        <center>
+            <div>
+                <img src="image.jfif" height="250px" width="250px">
+                <img src="image.jfif" height="250px" width="250px">
+                <img src="image.jfif" height="250px" width="250px">
+            </div>
+        </center>
+        <br>
+        <center>
+            <div>
+                <img src="image.jfif" height="250px" width="250px">
+                <img src="image.jfif" height="250px" width="250px">
+                <img src="image.jfif" height="250px" width="250px">
+            </div>
+        </center>
+        </div>
+        <div data-role="footer" data-theme="b">
+            <center>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a><br><br>
+                <a href="aboutus.html">About us</a><br><br>
+                <a href="products.html">Products</a><br><br>
+                <a href="login.html">Login</a><br><br>
+            </div>
+            <p>Copyright 2025 | All Rights reserved</p>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
